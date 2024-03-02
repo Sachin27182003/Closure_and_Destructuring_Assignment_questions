@@ -15,6 +15,9 @@ function shoppingCart (){
     },
     addToCart: function(product){
         Items.push(product)
+    },
+    removeItems: function(product){
+        Items.pop(Items[product])
     }
 }
 }
@@ -28,5 +31,9 @@ const product2 = { id: 1, name: "product2", price: 10}
 
 cart.addToCart(product1)
 cart.addToCart(product2)
+
+//console.log("cart Items:", cart.getCartItems())
+
+cart.removeItems(2)
 
 console.log("cart Items:", cart.getCartItems())
